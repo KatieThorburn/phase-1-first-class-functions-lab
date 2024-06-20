@@ -1,7 +1,26 @@
-// Code your solution in this file!
-const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo'];
 
 function returnFirstTwoDrivers(drivers) {
-    return console.log(drivers[1,2])
+    return drivers.slice(0, 2);
 }
-returnFirstTwoDrivers();
+function returnLastTwoDrivers(drivers) {
+    return drivers.slice(2);
+}
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
+
+function createFareMultiplier(fare) {
+    return function fareMultiplier(multiplier){
+            return fare*multiplier
+    }
+}
+function fareDoubler(fare) {
+    return fare*2
+}
+function fareTripler(fare) {
+    return fare*3
+}
+
+function selectDifferentDrivers(drivers, selectiongFunction){
+     return selectiongFunction(drivers);
+}
+
+
